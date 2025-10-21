@@ -1,0 +1,11 @@
+body{font-family:sans-serif;background:#111;color:#eee;margin:0}
+header{background:#222;color:#fff;padding:10px;display:flex;justify-content:space-between;align-items:center}
+.btn{background:#333;color:#fff;padding:6px 10px;border:none;border-radius:6px;text-decoration:none;cursor:pointer}
+.btn.primary{background:#0066ff}
+main{padding:10px}
+.hidden{display:none}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #333;padding:5px;text-align:center}
+.nav-giornate{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:10px}
+.arrow{background:#333;color:#fff;border:none;border-radius:6px;padding:5px 10px;cursor:pointer}
+.toolbar{margin-top:10px;display:flex;gap:10px;justify-content:center}

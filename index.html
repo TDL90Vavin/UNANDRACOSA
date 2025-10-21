@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA SERIE A È UN’ANDRA COSA</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer src="config.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <h1>LA SERIE A È UN’ANDRA COSA</h1>
+  <a href="classifica.html" class="btn">CLASSIFICA</a>
+</header>
+
+<main>
+  <section id="login">
+    <input id="nickname" placeholder="Inserisci nickname">
+    <button id="saveNick" class="btn">Salva</button>
+    <span id="nickStatus"></span>
+  </section>
+
+  <section id="schedina" class="hidden">
+    <div class="nav-giornate">
+      <button id="prevDay" class="arrow">←</button>
+      <h2>GIORNATA <span id="giornata-num"></span></h2>
+      <button id="nextDay" class="arrow">→</button>
+    </div>
+
+    <table id="tabella">
+      <thead>
+        <tr><th>Partita</th><th>1</th><th>X</th><th>2</th><th>Under</th><th>Over</th></tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <div class="toolbar">
+      <button id="submit" class="btn primary">INVIA LU PRONOSTICO</button>
+      <a href="classifica.html" class="btn">CLASSIFICA</a>
+    </div>
+
+    <p id="message"></p>
+  </section>
+</main>
+</body>
+</html>

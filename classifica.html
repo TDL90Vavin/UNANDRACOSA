@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classifica</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer src="config.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async ()=>{
+ const s = window._supaClient();
+ const tb = document.querySelector('#classifica-body');
+ const { data, error } = await s.from('classifica').select('*').order('punti',{ascending:false});
+ if(error){tb.innerHTML='<tr><td colspan=3>'+error.message+'</td></tr>';return;}
+ if(!data.length){tb.innerHTML='<tr><td colspan=3>Nessun dato</td></tr>';return;}
+ let i=1;data.forEach(r=>{tb.innerHTML+=`<tr><td>${i++}</td><td>${r.nickname}</td><td>${r.punti}</td></tr>`});
+});
+</script>
+</head>
+<body>
+<h1>Classifica</h1>
+<a href="index.html" class="btn">← Torna</a>
+<table><thead><tr><th>#</th><th>Nickname</th><th>Punti</th></tr></thead><tbody id="classifica-body"></tbody></table>
+</body>
+</html>

@@ -1,0 +1,2 @@
+window.APP_CONFIG={SUPABASE_URL:'INSERISCI_SUPABASE_URL',SUPABASE_ANON_KEY:'INSERISCI_SUPABASE_ANON_KEY'};
+window._supaClient=()=>{if(!window.__s)window.__s=supabase.createClient(window.APP_CONFIG.SUPABASE_URL,window.APP_CONFIG.SUPABASE_ANON_KEY);return window.__s};
